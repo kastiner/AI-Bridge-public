@@ -1,0 +1,37 @@
+name: GitHub connector test
+description: Harmless issue for verifying read and draft workflows.
+title: "[Connector test] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use synthetic content only. Never paste credentials, private repository information, or real research material into a connection test.
+
+  - type: checkboxes
+    id: safe
+    attributes:
+      label: Safety check
+      options:
+        - label: This test contains synthetic, non-sensitive content only.
+          required: true
+
+  - type: dropdown
+    id: operation
+    attributes:
+      label: Operation being tested
+      options:
+        - Read repository metadata
+        - Read issue content
+        - Draft a comment without posting
+        - Post an explicitly approved test comment
+        - Re-read and verify a posted comment
+    validations:
+      required: true
+
+  - type: textarea
+    id: result
+    attributes:
+      label: Result
+      description: Record the observable result without including authentication details.
+    validations:
+      required: true

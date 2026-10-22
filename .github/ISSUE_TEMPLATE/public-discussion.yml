@@ -1,0 +1,74 @@
+name: Public interdisciplinary discussion
+description: Open a structured discussion that is safe for permanent public disclosure.
+title: "[Public discussion] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Everything in this issue and its comments is public and may be copied or indexed permanently.**
+        Do not include private project records, identifiable participant information, unpublished data, internal links, credentials, photographs, or financial evidence.
+
+  - type: checkboxes
+    id: disclosure
+    attributes:
+      label: Publication check
+      options:
+        - label: I understand that this discussion and my GitHub identity are public.
+          required: true
+        - label: The material is approved for public discussion.
+          required: true
+        - label: I removed private, identifying, and unpublished information.
+          required: true
+
+  - type: dropdown
+    id: perspective
+    attributes:
+      label: Perspective
+      options:
+        - Computational or analytical
+        - Experimental
+        - Clinical or domain specialist
+        - Cross-disciplinary synthesis
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Public-safe question
+      description: State one question or interpretation gap.
+    validations:
+      required: true
+
+  - type: textarea
+    id: measurement
+    attributes:
+      label: Evidence and measurement boundary
+      description: Describe what was measured or observed, and what it does not establish.
+    validations:
+      required: true
+
+  - type: textarea
+    id: perspectives
+    attributes:
+      label: Differing interpretations
+      description: Keep each perspective distinct. Do not manufacture consensus.
+    validations:
+      required: true
+
+  - type: textarea
+    id: next
+    attributes:
+      label: Requested discussion outcome
+      description: What clarification, decision, analysis, or experiment should follow?
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: ai
+    attributes:
+      label: AI assistance
+      options:
+        - label: AI helped draft or translate this issue; a person reviewed the complete text before posting.
+          required: false
